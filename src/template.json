@@ -1,0 +1,24 @@
+{
+  "boss": [
+    	{
+	"name": "Eurysial Destruction Incarnate",
+        "specialStrength":1,
+        "specialTurn":5,
+        "damage":1,
+        "health":9,
+        "counter":1,
+        "specialDamage":100,
+        "bossState":1
+	},
+	{
+	"name": "Dorumgir the Loathing",
+        "specialStrength":1,
+        "specialTurn":5,
+        "damage":1,
+        "health":9,
+        "counter":1,
+        "specialDamage":100,
+        "bossState":1
+	}
+  ]
+}
