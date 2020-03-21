@@ -31,7 +31,7 @@ void  boss::Eurysial (boss& b){
 
 void boss::Dorumgir (boss& b){
 
-	b.bossName = "Dorumgir, the Loathing";
+	b.bossName = "Dorumgir, The Loathing";
         b.specialStrength =1;
         b.specialTurn=4;
         b.damage=1;
