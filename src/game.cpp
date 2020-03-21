@@ -2,7 +2,7 @@
 
 void game::start(){
 	mainMenu mm;
-	///Loaated in the game start header
+	///Located in the game start header
         gameStart gs;
         ///Located in the game Middle header
         gameMiddle gm;
