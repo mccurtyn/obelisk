@@ -1,7 +1,7 @@
 {
   "boss": [
     	{
-	"name": "Eurysial Destruction Incarnate",
+	"name": "Eurysial, Destruction Incarnate",
         "specialStrength":1,
         "specialTurn":5,
         "damage":1,
@@ -11,7 +11,7 @@
         "bossState":1
 	},
 	{
-	"name": "Dorumgir the Loathing",
+	"name": "Dorumgir, the Loathing",
         "specialStrength":1,
         "specialTurn":5,
         "damage":1,
@@ -19,6 +19,16 @@
         "counter":1,
         "specialDamage":100,
         "bossState":1
+	},
+  	{
+	"name" : "Cinziel, Lord of Lies",
+        "specialStrength" :1,
+        "specialTurn":3,
+        "damage" :1,
+        "health" : 9,
+        "counter" :1,
+        "specialDamage" :100,
+        "bossState": 1
 	}
   ]
 }

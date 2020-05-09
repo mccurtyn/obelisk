@@ -19,14 +19,23 @@ boss chooseBoss(int choice){
 
 void  boss::Eurysial (boss& b){
 
-	b.bossName = "Eurysial, Destruction Incarnate";
+	/*b.bossName = "Eurysial, Destruction Incarnate";
 	b.specialStrength =1;
 	b.specialTurn=5;
 	b.damage=1;
 	b.setBossHealth(9);
 	b.counter =1;
 	b.specialDamage=100;
-	b.bossState=1;
+	b.bossState=1;*/
+	ifstream ifs("template.json");
+    	Json::Reader reader;
+    	Json::Value obj;
+    	reader.parse(ifs, obj); // reader can also read strings
+    	const Json::Value& characters = obj["boss"]; // array of characters
+    	for (int i = 0; i < characters.size(); i++){
+        	cout << "    name: " << characters[i]["name"].asString();
+        	cout << endl;
+    	}
 }
 
 void boss::Dorumgir (boss& b){

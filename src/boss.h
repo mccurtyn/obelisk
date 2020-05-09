@@ -1,6 +1,6 @@
 #include <string>
 #include "entity.h"
-#include "json/json.h"
+#include <jsoncpp/json/json.h>
 #include <iostream>
 #include <fstream>
 using namespace std;

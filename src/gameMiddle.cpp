@@ -2,6 +2,7 @@
 
 void gameMiddle::gameLoop(player& p){
 
+	
 	storyReader sR;
 	sR.ch1Reader(p.getClassInfoName());
 	choice=0;

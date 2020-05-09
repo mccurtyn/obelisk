@@ -1,0 +1,14 @@
+{
+   "bosses" : 3,
+   "boss" : 
+   [
+      {
+         "name" : "test"
+      },
+      {
+         "name" : "test2"
+      }
+   ],
+   "class" : "warrior",
+   "name" : "mccurtyn"
+}

@@ -1,9 +1,9 @@
 #include "mainMenu.h"
 
-void mainMenu::loop(){
+void mainMenu::loop(save& s){
 
 	int choice=0;
-	system(CLEAR);	
+	system(CLEAR);
 	while (choice <1 || choice >3){
 		cout << "    OBELISK      " << endl
 	     	     << "    Main Menu    " << endl
@@ -17,20 +17,8 @@ void mainMenu::loop(){
 		case 1:
 			break;	
 		case 2: 
-			loadSave();
+			s.setExist(1);
 			break;
 	}
 }
 
-void mainMenu::loadSave(){
-
-	#define SAVE
-	ifstream in("template.json");
-	Json::Value bossTemp_json;
-	in >> bossTemp_json;
-	for (Json::Value::iterator it = bossTemp_json["boss"].begin(); it != bossTemp_json["boss"].end(); ++it){
-		cout << (*it)["1"].asString() << endl;
-	}
-	in.close();
-	cin.get();
-}
