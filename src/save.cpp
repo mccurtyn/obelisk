@@ -37,20 +37,21 @@ void save::loadSave(player& p, ifstream& in){
 }
 void save::createSave(){
 
+	#define bJson rootJsonValue["boss"][i]
 	Json::Value rootJsonValue;
 	rootJsonValue["name"] = charName;
 	rootJsonValue["class"] = charClass;
 	int i =0;
 	for (vector<boss> :: iterator it = saveBosses.begin(); it != saveBosses.end(); ++it){
-		rootJsonValue["boss"][i]["name"] = (*it).getBossName();
-		rootJsonValue["boss"][i]["specialStrnegth"] = (*it).getBossSpecialStrength();
-		rootJsonValue["boss"][i]["specialTurn"] = (*it).getBossSpecialTurn();
-		rootJsonValue["boss"][i]["damage"] = (*it).getBossDamage();
-		rootJsonValue["boss"][i]["health"] = (*it).getBossHealth();
-		rootJsonValue["boss"][i]["counter"] = (*it).getBossSpecialCounter();
-		rootJsonValue["boss"][i]["specialDamage"] = (*it).getSpecialDamage();
-		rootJsonValue["boss"][i]["bossState"] = (*it).getBossState();
-	i++;
+		bJson["name"] = (*it).getBossName();
+		bJson["specialStrnegth"] = (*it).getBossSpecialStrength();
+		bJson["specialTurn"] = (*it).getBossSpecialTurn();
+		bJson["damage"] = (*it).getBossDamage();
+		bJson["health"] = (*it).getBossHealth();
+		bJson["counter"] = (*it).getBossSpecialCounter();
+		bJson["specialDamage"] = (*it).getSpecialDamage();
+		bJson["bossState"] = (*it).getBossState();
+		i++;
 	}
 	Json::StreamWriterBuilder builder;
 	builder["commentStyle"] = "None";
