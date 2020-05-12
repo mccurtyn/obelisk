@@ -1,8 +1,7 @@
 #include <string>
 #include "class.h"
 #include "entity.h"
-#ifndef PLAYER_H
-#define PLAYER_H
+#pragma once
 using namespace std;
 
 struct player{
@@ -71,4 +70,3 @@ public:
 
 
 };
-#endif 

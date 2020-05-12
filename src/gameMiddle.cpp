@@ -4,7 +4,7 @@ void gameMiddle::gameLoop(player& p){
 
 	
 	storyReader sR;
-	sR.ch1Reader(p.getClassInfoName());
+	sR.ch1Reader(p.getClassInfoName()+"Story.txt");
 	choice=0;
 	while(choice <=0 || choice >=3){
 		cout << "Who do you save?" << endl

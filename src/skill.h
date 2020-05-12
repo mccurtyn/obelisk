@@ -1,15 +1,21 @@
 #include <string>
 #include <iostream>
+#pragma once
 using namespace std;
 
-#ifndef SKILL_H
-#define SKILL_H
 struct skill{
 private:
+	int skillId;
 	string skillName;
 	int damage;
 	string effect;
 public:
+	void setSkillId(int s){
+		skillId =s;
+	}
+	int getSkillId(){
+		return skillId;
+	}
 	void setSkillName(string s){
 		skillName=s;
 	}
@@ -34,4 +40,3 @@ public:
 		cout << skillName << " " << damage << " " << effect << endl;
 	}
 };
-#endif

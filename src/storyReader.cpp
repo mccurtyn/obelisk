@@ -1,7 +1,6 @@
 #include "storyReader.h"
 void storyReader::ch1Reader (string pClass){
 
-	pClass = pClass +"Story.txt";
 	string line, trash;
 	ifstream infile(pClass);
 	cin.ignore();
@@ -18,5 +17,5 @@ void storyReader::ch1Reader (string pClass){
     		}
     	infile.close();
   	}	
-
+	cout << pClass << endl;
 }

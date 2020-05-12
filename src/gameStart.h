@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include "player.h"
-#include "sysdef.h"
+#include "mSysdef.h"
 using namespace std;
 ///Sets the stage for the game
 struct gameStart {

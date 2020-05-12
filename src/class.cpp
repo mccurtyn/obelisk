@@ -9,4 +9,3 @@ string classInfo::getClassSkillSet(){
 
 	return ss.s1.getSkillName();
 }
-

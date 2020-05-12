@@ -1,8 +1,7 @@
 #include <string>
 #include "skillSet.h"
-
-#ifndef CLASS_H
-#define CLASS_H
+#include <vector>
+#pragma once
 using namespace std;
 
 struct classInfo{
@@ -10,6 +9,7 @@ struct classInfo{
 private:
 	string className;
 	skillSet ss;
+	vector <skill> skillSets;
 public:
 	void setClassName(string c){
 		className=c;
@@ -17,10 +17,8 @@ public:
 	string getClassName(){
 		return className;
 	}
-
-	void setClassSkillSet(int choice);
-
 	string getClassSkillSet();
+	void setClassSkillSet(int choice);
 
 	void displayClassSkills(){
 		ss.displaySkills();
@@ -46,4 +44,3 @@ public:
         }
 
 };
-#endif

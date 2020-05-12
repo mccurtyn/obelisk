@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include "entity.h"
 #include <jsoncpp/json/json.h>
@@ -72,9 +73,5 @@ public:
 		return bossState;
 	}
 	string getBossWarning(boss& b);
-	void Eurysial (boss& b);
-	void Dorumgir (boss& b);
-	void Cinziel (boss& b);
 };
 
-boss chooseBoss(int choice);

@@ -13,21 +13,20 @@ void game::start(){
         ///Starts the game mostly for initializing and settting class and name
 	mm.loop(s);
 	if (!s.getExist()){
+		ifstream in("template.json");
 		gs.full(p);
+		s.setCharName(p.getUsername());
+		s.setCharClass(p.getClassInfoName());
+		s.loadBosses(b, in);
+		in.close();
 	} else {
-		loadSave(s, p);
+		ifstream in("save.json");
+		s.loadSave(p, in);
+		s.loadBosses(b, in);
+		in.close();
 	}
+	s.createSave();
 	///Starts the actual game
-        gm.gameLoop(p);
+        //gm.gameLoop(p);
 }
 
-void loadSave(save& s, player& p){
-
-	ifstream in("save.json");
-        Json::Reader reader;
-        Json::Value obj;
-        reader.parse(in, obj);
-	p.setUsername(obj["name"].asString());
-	p.setClassInfoName("warrior");
-        p.setClassInfoSkillSet(1);
-}

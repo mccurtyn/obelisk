@@ -15,4 +15,3 @@ public:
 
 };
 
-void loadSave(save& s, player& p);
