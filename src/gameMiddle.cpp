@@ -1,10 +1,10 @@
 #include "gameMiddle.h"
 
-void gameMiddle::gameLoop(player& p){
+void gameMiddle::gameLoop(player& p, vector<string> story){
 
 	
 	storyReader sR;
-	sR.ch1Reader(p.getClassInfoName()+"Story.txt");
+	sR.ch1Reader(story);
 	choice=0;
 	while(choice <=0 || choice >=3){
 		cout << "Who do you save?" << endl

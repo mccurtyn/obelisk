@@ -10,6 +10,7 @@ void game::start(){
 	//Located in save header
 	save s;
 	vector<boss> b;
+	vector<string> story;
         ///Starts the game mostly for initializing and settting class and name
 	mm.loop(s);
 	if (!s.getExist()){
@@ -25,8 +26,19 @@ void game::start(){
 		s.loadBosses(b, in);
 		in.close();
 	}
-	s.createSave();
+	loadStory(story,p.getClassInfoName()+"Story.txt");
 	///Starts the actual game
-        //gm.gameLoop(p);
+        gm.gameLoop(p, story);
 }
 
+void game::loadStory(vector<string>& story, string pClass){
+
+	string line, trash;
+        ifstream infile(pClass);
+        if (infile.is_open()){
+                while ( getline(infile,line) ) {
+                	story.push_back(line);       		 
+                }
+        infile.close();
+        }
+}

@@ -12,6 +12,6 @@ private:
 
 public:
 	void start();
-
+	void loadStory(vector<string>& story, string pClass);
 };
 

@@ -2,7 +2,8 @@
 #include <string>
 #include <fstream>
 #include "mSysdef.h"
-#include<limits>
+#include <limits>
+#include <vector>
 using namespace std;
 
 struct storyReader{
@@ -10,6 +11,6 @@ struct storyReader{
 private:
 
 public:
-	void ch1Reader(string pClass);
+	void ch1Reader(vector<string> story);
 
 };

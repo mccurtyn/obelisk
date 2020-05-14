@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <vector>
 #include "player.h"
 #include "boss.h"
 #include "mSysdef.h"
@@ -9,7 +10,7 @@ using namespace std;
 
 struct gameMiddle{
 	int choice;
-	void gameLoop(player& p);
+	void gameLoop(player& p, vector<string> story);
 	void fight(player& p, boss& bossFight);
 	void playerTurn(player& p, boss& b);
 	void playerResponse(player& p, int choice, boss& b);
