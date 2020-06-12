@@ -30,5 +30,19 @@
         "specialDamage" :100,
         "bossState": 1
 	}
+  ],
+  "monster":[
+	{
+	"name" : "Warzone archer",
+	"damage": 1,
+	"state": 1,
+	"health":9
+	},
+	{
+	"name": "Warzone warrior",
+	"damage": 1,
+	"state": 1,
+	"health": 3
+	}
   ]
 }

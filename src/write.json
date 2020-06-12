@@ -1,0 +1,37 @@
+{
+   "boss" : 
+   [
+      {
+         "bossState" : true,
+         "counter" : 1,
+         "damage" : 1,
+         "health" : 9,
+         "name" : "Eurysial, Destruction Incarnate",
+         "specialDamage" : 100,
+         "specialStrnegth" : 1,
+         "specialTurn" : 5
+      },
+      {
+         "bossState" : true,
+         "counter" : 1,
+         "damage" : 1,
+         "health" : 9,
+         "name" : "Dorumgir, the Loathing",
+         "specialDamage" : 100,
+         "specialStrnegth" : 1,
+         "specialTurn" : 5
+      },
+      {
+         "bossState" : true,
+         "counter" : 1,
+         "damage" : 1,
+         "health" : 9,
+         "name" : "Cinziel, Lord of Lies",
+         "specialDamage" : 100,
+         "specialStrnegth" : 1,
+         "specialTurn" : 3
+      }
+   ],
+   "class" : "warrior",
+   "name" : "sadasd"
+}
