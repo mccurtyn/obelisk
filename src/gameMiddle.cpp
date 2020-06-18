@@ -1,25 +1,44 @@
 #include "gameMiddle.h"
 
-void gameMiddle::gameLoop(player& p, vector<string> story){
-
-	
+void gameMiddle::gameLoop(player& p, vector<string> story, vector<boss>& bosses, vector<monster>& m){
+	fight f;	
 	storyReader sR;
 	sR.ch1Reader(story);
 	choice=0;
-	while(choice <=0 || choice >=3){
-		cout << "Who do you save?" << endl
-		     << "1) Darrell" << endl
-		     << "2) General" << endl;
-		cin >> choice;
-		if (cin.fail()){
+	bool end = false;
+	while(p.getHealth() >0 && end != true){
+		while(choice <=0 || choice >=3){
+			cout << "Who do you save?" << endl
+			     << "1) Darrell" << endl
+		     	     << "2) General" << endl;
+			cin >> choice;
+			if (cin.fail()){
 
-                	cin.clear();
-                	cin.ignore();
-                }
+                		cin.clear();
+                		cin.ignore();
+                	}
 
+		}
+		if (choice == 1){
+			for (int i =0; i<2; i++){
+				f.addMonster(findMinion("Warzone warrior",m));
+			}
+		} else {
+			f.addMonster(findMinion("Warzone archer",m));
+		}
+		f.fightStart(p);
+		end=true;
 	}
 }
+monster gameMiddle::findMinion(string s, vector<monster> m){
 
+	for (int i =0; i<m.size(); i++){
+		if (m[i].getMonsterName() == s){
+			return m[i];
+		}
+	}		
+}
+/*
 void gameMiddle::playerTurn(player& p, boss& b){
 
 	int choice =0;
@@ -79,3 +98,4 @@ void gameMiddle::bossTurn(player& p, boss& b){
 	cin.get();
 	system(CLEAR);
 }
+*/

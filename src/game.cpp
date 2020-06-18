@@ -11,8 +11,11 @@ void game::start(){
 	save s;
 	vector<boss> b;
 	vector<string> story;
+	vector<monster> minions;
+	gui g;
+	g.createGui();
         ///Starts the game mostly for initializing and settting class and name
-	mm.loop(s);
+	/*mm.loop(s);
 	if (!s.getExist()){
 		ifstream in("template.json");
 		gs.full(p);
@@ -20,15 +23,22 @@ void game::start(){
 		s.setCharClass(p.getClassInfoName());
 		s.loadBosses(b, in);
 		in.close();
+		in.open("template.json");
+		s.loadMonsters(minions, in);
+		in.close();
 	} else {
-		ifstream in("save.json");
+		ifstream in("write.json");
 		s.loadSave(p, in);
 		s.loadBosses(b, in);
+		in.close();
+		in.open("template.json");
+		s.loadMonsters(minions, in);
 		in.close();
 	}
 	loadStory(story,p.getClassInfoName()+"Story.txt");
 	///Starts the actual game
-        gm.gameLoop(p, story);
+	gm.gameLoop(p, story, b, minions);
+*/	
 }
 
 void game::loadStory(vector<string>& story, string pClass){

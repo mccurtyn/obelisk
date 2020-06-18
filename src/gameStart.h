@@ -1,7 +1,9 @@
-#include <string>
 #include <iostream>
+#include "cUtil.h"
 #include "player.h"
 #include "mSysdef.h"
+#include <ncurses.h>
+#include <cstring>
 using namespace std;
 ///Sets the stage for the game
 struct gameStart {

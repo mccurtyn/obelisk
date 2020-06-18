@@ -1,6 +1,7 @@
 #include "storyReader.h"
 void storyReader::ch1Reader (vector<string> story){
 
+	system(CLEAR);
 	cin.ignore();
 	for (vector<string> :: iterator it = story.begin(); it != story.end(); it++)
 	{

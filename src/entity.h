@@ -1,8 +1,11 @@
 #include <string>
 #pragma once
 
+using namespace std;
+
 class entity {
 private:
+	string name;
 	int health;
 	bool alive;
 public:
@@ -17,5 +20,11 @@ public:
 	}
 	bool getEntAlive(){
 		return alive;
+	}
+	void setEntName(string n){
+		name = n;
+	}
+	string getEntName(){
+		return name;
 	}
 };

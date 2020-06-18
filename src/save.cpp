@@ -22,6 +22,22 @@ void save::loadBosses(vector<boss>& b, ifstream& in){
 	}
 
 }
+void save::loadMonsters(vector<monster>& m, ifstream& in){
+
+	monster temp;
+        Json::Reader reader;
+        Json::Value obj;
+        reader.parse(in, obj); // reader can also read strings
+        const Json::Value& Monster = obj["monster"]; // array of characters
+        for (int i = 0; i < Monster.size(); i++){
+                temp.setMonsterName(Monster[i]["name"].asString());
+                temp.setMonsterDamage(Monster[i]["damage"].asInt());
+                temp.setMonsterHealth((Monster[i]["health"].asInt()));
+                temp.setMonsterAlive(Monster[i]["state"].asBool());
+
+                m.push_back(temp);
+        }
+}
 void save::loadSave(player& p, ifstream& in){
 
         Json::Reader reader;
@@ -59,5 +75,6 @@ void save::createSave(){
 
 	std::unique_ptr<Json::StreamWriter> writer(builder.newStreamWriter());
 	std::ofstream outputFileStream("write.json");
+
 	writer -> write(rootJsonValue, &outputFileStream);
 }

@@ -2,21 +2,21 @@
 #include "class.h"
 #include "entity.h"
 #pragma once
+
 using namespace std;
 
 struct player{
 
 private:
-	string username;
 	classInfo pCI;	
 	string effect;	
 	entity ent;
 public:	
 	void setUsername(string u){
-		username=u;
+		ent.setEntName(u);
 	}
 	string getUsername(){
-		return username;
+		return ent.getEntName();
 	}
 
 	void setHealth(int h){

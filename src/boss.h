@@ -1,45 +1,50 @@
 #pragma once
-#include <string>
-#include "entity.h"
-#include <jsoncpp/json/json.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <string>
+///Monster is the basse class for boss
+#include "monster.h"
 using namespace std;
 
 struct boss{
 
 private:
-	string bossName;
-	entity ent;
-	int damage;
+	///Contains anything that isn't boss specfic like health
+	monster m;
+	///For later features like shield use
 	int specialStrength;
 	int specialDamage;
+	///Might Depricate once i make a better ai attack system
 	int counter;
 	int specialTurn;
-	bool bossState;
 	string bossWarning;
 public:
+	///Sets all attributes for the base class
 	void setBossName(string n){
-		bossName = n;
+		m.setMonsterName(n);
 	}
 	string getBossName(){
-		return bossName;
+		return m.getMonsterName();
 	}
-	
 	void setBossHealth(int h){
-		ent.setEntHealth(h);
+		m.setMonsterHealth(h);
 	}
 	int getBossHealth(){
-		return ent.getEntHealth();
+		return m.getMonsterHealth();
 	}
-
 	void setBossDamage(int d){
-		damage = d;
+		m.setMonsterDamage(d);
 	}
 	int getBossDamage(){
-		return damage;
+		return m.getMonsterDamage();
 	}
-	
+	void setBossState(bool b){
+                m.setMonsterAlive(b);
+        }
+        bool getBossState(){
+                return m.getMonsterAlive();
+        }
+	///Getters and setters for boss specific attributes
 	void setBossSpecialStrength(int s){
 		specialStrength= s;
 	}
@@ -65,12 +70,6 @@ public:
 	}
 	int getSpecialDamage(){
 		return specialDamage;
-	}
-	void setBossState(bool b){
-		bossState = b;
-	}
-	bool getBossState(){
-		return bossState;
 	}
 	string getBossWarning(boss& b);
 };

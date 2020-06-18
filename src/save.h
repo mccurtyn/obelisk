@@ -4,6 +4,7 @@
 #include <jsoncpp/json/json.h>
 #include "player.h"
 #include "boss.h"
+#include "monster.h"
 #include <memory>
 #pragma once
 
@@ -38,6 +39,7 @@ public:
 	}
 	void loadSave(player& p, ifstream& in);
 	void loadBosses(vector<boss>& b, ifstream& in);
+	void loadMonsters(vector<monster>& m, ifstream& in);
 	void createSave();
 };
 

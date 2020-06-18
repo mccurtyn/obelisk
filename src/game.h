@@ -5,7 +5,8 @@
 #include "player.h"
 #include "mainMenu.h"
 #include "save.h"
-
+#include "monster.h"
+#include "gui.h"
 struct game {
 
 private:
